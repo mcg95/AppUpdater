@@ -4,13 +4,13 @@ import java.net.URL;
 
 public class Update {
     private String version;
-    private Integer versionCode;
+    private String versionCode;
     private String releaseNotes;
     private URL apk;
 
     public Update() {}
 
-    public Update(String latestVersion, Integer latestVersionCode) {
+    public Update(String latestVersion, String latestVersionCode) {
         this.version = latestVersion;
         this.versionCode = latestVersionCode;
     }
@@ -26,7 +26,7 @@ public class Update {
         this.releaseNotes = releaseNotes;
     }
 
-    public Update(String latestVersion, Integer latestVersionCode, String releaseNotes, URL apk) {
+    public Update(String latestVersion, String latestVersionCode, String releaseNotes, URL apk) {
         this(latestVersion, releaseNotes, apk);
         this.versionCode = latestVersionCode;
     }
@@ -39,11 +39,11 @@ public class Update {
         this.version = latestVersion;
     }
 
-    public Integer getLatestVersionCode() {
+    public String getLatestVersionCode() {
         return versionCode;
     }
 
-    public void setLatestVersionCode(Integer versionCode) {
+    public void setLatestVersionCode(String versionCode) {
         this.versionCode = versionCode;
     }
 
